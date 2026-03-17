@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom colors for the dark theme */
+  --color-bg: #111;
+  --color-bg-card: #1a1a1a;
+  --color-bg-input: #0a0a0a;
+  --color-bg-button: #222;
+  --color-border: #333;
+  --color-border-light: #282828;
+  --color-text-muted: #888;
+  --color-text-dim: #555;
+  --color-text-label: #ccc;
+  --color-accent-red: #e53935;
+  --color-accent-green: #4caf50;
+  --color-accent-orange: #ff9800;
+
+  /* Custom animations */
+  --animate-pulse-record: pulse-record 1.5s ease-out infinite;
+  --animate-blink: blink 0.8s step-end infinite;
+}
+
+@keyframes pulse-record {
+  0% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.5); }
+  70% { box-shadow: 0 0 0 16px rgba(229, 57, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-white min-h-screen flex justify-center items-start;
+    font-family: 'Space Mono', monospace;
+  }
+}

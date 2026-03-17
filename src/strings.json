@@ -1,0 +1,23 @@
+{
+  "appTitle": "OpenFlow",
+  "save": "Save",
+  "transcriptHeading": "Transcript",
+  "clear": "Clear",
+  "transcriptPlaceholder": "Your text will appear here",
+  "stop": "Stop",
+  "recordAgain": "Record Again",
+  "record": "Record",
+  "holdToRecord": "Hold to Record",
+  "recording": "Recording...",
+  "modeClick": "Click",
+  "modeHold": "Hold",
+  "sending": "Sending...",
+  "send": "Send",
+  "endpointLabel": "API Endpoint",
+  "endpointPlaceholder": "http://localhost:8000/api/audio",
+  "recordingsHeading": "Recordings",
+  "noRecordings": "No recordings yet",
+  "play": "Play",
+  "delete": "Delete",
+  "recordingLabel": "Recording"
+}
