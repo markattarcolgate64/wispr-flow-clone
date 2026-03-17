@@ -27,7 +27,7 @@ export function TranscriptBox({
   const showPlaceholder = !hasBeenUsed && !text && !isStreaming && !error;
 
   return (
-    <div className="flex-1 min-w-0 pt-20">
+    <div className="flex-1 min-w-[300px] pt-20">
       <div className="flex items-center justify-between mb-2.5">
         <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted">
           {strings.transcriptHeading}

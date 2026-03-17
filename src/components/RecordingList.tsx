@@ -51,7 +51,7 @@ export function RecordingList({ recordings, onDelete, onSend, sendingId }: Recor
 
   if (recordings.length === 0) {
     return (
-      <div className="w-70 shrink-0 pt-20">
+      <div className="shrink-0 pt-20">
         <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">
           {strings.recordingsHeading}
         </h2>
@@ -61,15 +61,15 @@ export function RecordingList({ recordings, onDelete, onSend, sendingId }: Recor
   }
 
   return (
-    <div className="w-70 shrink-0 pt-20">
+    <div className="shrink-0 pt-20">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">
         {strings.recordingsHeading}
       </h2>
       <ul className="list-none flex flex-col gap-2">
         {recordings.map((rec) => (
-          <li key={rec.id} className="flex items-center justify-between px-3.5 py-2.5 bg-bg-card border border-border-light rounded-lg">
+          <li key={rec.id} className="flex items-center justify-between gap-4 px-3.5 py-2.5 bg-bg-card border border-border-light rounded-lg">
             <span className="text-sm font-medium text-text-label">{rec.label}</span>
-            <div className="flex gap-1.5">
+            <div className="flex gap-1.5 shrink-0">
               {playingId === rec.id ? (
                 <button className={`${btnBase} border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-bg`} onClick={handleStop}>
                   {strings.stop}
