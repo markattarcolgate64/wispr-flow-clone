@@ -44,6 +44,19 @@ All new components and features must include corresponding test files.
 - Test files mirror source structure under `backend/tests/` (e.g., `backend/services/transcription.py` → `backend/tests/services/test_transcription.py`)
 - Shared fixtures live in `backend/tests/conftest.py`
 
+## Docker
+
+### Building and running
+- `docker build -t wispr-flow .` — build the image
+- `docker run -p 8000:8000 --env-file .env wispr-flow` — run the container
+- `docker compose up` — build and run via Compose (reads `.env` automatically)
+
+### How it works
+- 3-stage multi-stage build: Node (frontend build) → Python (pip install) → Python slim (runtime)
+- FastAPI serves the Vite-built SPA via a conditional `StaticFiles` mount at `/`
+- API routes (`/api/audio`, `/health`) are registered before the mount, so they take priority
+- The static mount only activates when `/app/static` exists (i.e., inside Docker) — local dev is unaffected
+
 ## Directory Documentation
 
 Every source directory contains a `DIRECTORY.md` file that describes the purpose of that directory and each file/subdirectory within it.
